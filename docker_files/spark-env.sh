@@ -1,0 +1,5 @@
+#!/bin/bash
+STANDALONE_SPARK_MASTER_HOST=`hostname`
+SPARK_MASTER_PORT=7077
+
+
