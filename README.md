@@ -13,7 +13,7 @@ Based on Ubuntu 14.04 (Trusty LTS)
 
 Works with Cloudera CDH 5
 
-*UPDATED FOR LATEST VERSION - CDH5.3.2
+*UPDATED FOR LATEST VERSION - CDH5.4.8
 
 
 *Under development. 
@@ -24,21 +24,18 @@ Works with Cloudera CDH 5
 ##Install
 To install the docker-cloudera-quickstart from docker-hub, simply use the following command:
 ```
-docker pull caioquirino/docker-cloudera-quickstart
+docker pull registry-aws.in.zhihu.com/teamdata/cdh:v3
 ```
 ##Use
 To start an instance in BACKGROUND (as daemon):
 ```
-docker run -i -t -d caioquirino/docker-cloudera-quickstart
+docker run -it -d -P --name cdh registry-aws.in.zhihu.com/teamdata/cdh:v3
 ```
-To start an instance in FOREGROUND:
-```
-docker run -i -t caioquirino/docker-cloudera-quickstart
-```
+
 To open more terminal instances for the running instance:
 ```
 docker ps
-docker exec -i -t CONTAINER_ID bash -l
+docker exec -it cdh bash 
 ```
 
 #Links
@@ -90,4 +87,3 @@ for ten minutes, add the following to /etc/hadoop/conf/yarn-site.xml :
 
 Then you can find the logs, e.g.: `sudo -E ./yarnlogs.bash Matcher`
 #Please report any issue or feedback if possible.
-# docker-cdh-bupt
