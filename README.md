@@ -13,15 +13,16 @@ Based on Ubuntu 14.04 (Trusty LTS)
 
 Works with Cloudera CDH 5
 
-*UPDATED FOR LATEST VERSION - CDH5.4.8
+* UPDATED FOR LATEST VERSION - CDH5.4.8
 
 
-*Under development. 
+* Under development. 
 
 
-#Instructions
-##Install Docker in Ubuntu Wheezy
+# Instructions
+## Install Docker in Ubuntu Wheezy
 To install Docker in your Ubuntu Wheezy, simply use the following command:
+
 ```
 sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 sudo mkdir /etc/apt/sources.list.d/ && sudo sh -c  "echo \"deb https://apt.dockerproject.org/repo debian-wheezy main\" >> /etc/apt/sources.list.d/docker.list"
@@ -32,30 +33,35 @@ sudo gpasswd -a ${USER} docker
 sudo service docker restart && newgrp docker
 ```
 
-##Install CDH 
+## Install CDH 
 To install the docker-cloudera-quickstart from docker-hub, simply use the following command:
 「AWS 开发环境」
+
 ```
 docker pull registry-aws.in.zhihu.com/teamdata/cdh:v3
 ```
+
 「AWS 生产环境」
+
 ```
 docker pull registry.in.zhihu.com/teamdata/cdh:v3
 ```
 
-##Use
+## Use
 To start an instance in BACKGROUND (as daemon):
+
 ```
 docker run -it -d -P --name cdh registry-aws.in.zhihu.com/teamdata/cdh:v3
 ```
 
 To open more terminal instances for the running instance:
+
 ```
 docker ps
 docker exec -it cdh bash 
 ```
 
-#Links
+# Links
 
 [Pull the image on Docker Hub](https://registry.hub.docker.com/u/caioquirino/docker-cloudera-quickstart/)
 
@@ -103,4 +109,4 @@ for ten minutes, add the following to /etc/hadoop/conf/yarn-site.xml :
 	  </property>
 
 Then you can find the logs, e.g.: `sudo -E ./yarnlogs.bash Matcher`
-#Please report any issue or feedback if possible.
+# Please report any issue or feedback if possible.
