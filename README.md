@@ -1,5 +1,6 @@
 docker-cloudera-quickstart
 ==========================
+* This repo is based on [caioquirino/docker-cloudera-quickstart](https://github.com/caioquirino/docker-cloudera-quickstart) *
 
 Docker Cloudera Quick Start Image
 
@@ -35,6 +36,7 @@ sudo service docker restart && newgrp docker
 
 ## Install CDH 
 To install the docker-cloudera-quickstart from docker-hub, simply use the following command:
+
 「AWS 开发环境」
 
 ```
@@ -63,9 +65,8 @@ docker exec -it cdh bash
 
 # Links
 
-[Pull the image on Docker Hub](https://registry.hub.docker.com/u/caioquirino/docker-cloudera-quickstart/)
 
-[Github page](https://github.com/caioquirino/docker-cloudera-quickstart)
+[Gitlab page](https://git.in.zhihu.com/zhe/docker-cdh)
 
 
 # Checklist of components:
