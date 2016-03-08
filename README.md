@@ -1,6 +1,6 @@
 docker-cloudera-quickstart
+(This repo is based on [caioquirino/docker-cloudera-quickstart](https://github.com/caioquirino/docker-cloudera-quickstart) )
 ==========================
-* This repo is based on [caioquirino/docker-cloudera-quickstart](https://github.com/caioquirino/docker-cloudera-quickstart) *
 
 Docker Cloudera Quick Start Image
 
