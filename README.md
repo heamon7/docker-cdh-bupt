@@ -20,12 +20,29 @@ Works with Cloudera CDH 5
 
 
 #Instructions
+##Install Docker in Ubuntu Wheezy
+To install Docker in your Ubuntu Wheezy, simply use the following command:
+```
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sudo mkdir /etc/apt/sources.list.d/ && sudo sh -c  "echo \"deb https://apt.dockerproject.org/repo debian-wheezy main\" >> /etc/apt/sources.list.d/docker.list"
+sudo apt-get install apt-transport-https && sudo apt-get update && sudo apt-get install docker-engine  
+sudo service docker start  
+sudo docker run hello-world
+sudo gpasswd -a ${USER} docker
+sudo service docker restart && newgrp docker
+```
 
-##Install
+##Install CDH 
 To install the docker-cloudera-quickstart from docker-hub, simply use the following command:
+「AWS 开发环境」
 ```
 docker pull registry-aws.in.zhihu.com/teamdata/cdh:v3
 ```
+「AWS 生产环境」
+```
+docker pull registry.in.zhihu.com/teamdata/cdh:v3
+```
+
 ##Use
 To start an instance in BACKGROUND (as daemon):
 ```
