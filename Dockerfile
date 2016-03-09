@@ -53,5 +53,5 @@ EXPOSE 7077:7077
 
 # Define default command.
 #CMD ["/usr/bin/cdh_startup_script.sh && bash"]
-#CMD ["bash /usr/bin/cdh_startup_script.sh && bash"]
-CMD ["cdh_startup_script.sh"]
+CMD ["bash /usr/bin/cdh_startup_script.sh"]	
+#CMD ["cdh_startup_script.sh"]

@@ -109,8 +109,10 @@ echo "Install Cloudera Components"
 #apt-get -y install hadoop-kms hadoop-kms-server hive hbase hbase-thrift hbase-master pig hue oozie oozie-client spark-core spark-master spark-worker spark-history-server spark-python || die
 apt-get -y install hadoop-kms hadoop-kms-server hive hbase hbase-thrift hbase-master hbase-regionserver pig hue oozie oozie-client || die
 #install mysql #add by yuanzhe
-cp /etc/hive/conf.dist/mysql-connector-java-5.1.38-bin.jar /usr/lib/hive/lib/
+mv /etc/hive/conf.dist/mysql-connector-java-5.1.38-bin.jar /usr/lib/hive/lib/
 apt-get install -y mysql-server
+
+/etc/init.d/mysql start 
 
 mysql -u root -e "CREATE DATABASE metastore_db;CREATE USER 'hiveuser'@'%' IDENTIFIED BY 'hivepassword';GRANT all on *.* to 'hiveuser'@'%' identified by 'hivepassword';flush privileges;"
 #Use standalone Zookeeper

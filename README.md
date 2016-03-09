@@ -14,7 +14,7 @@ Based on Ubuntu 14.04 (Trusty LTS)
 
 Works with Cloudera CDH 5
 
-* UPDATED FOR LATEST VERSION - CDH5.4.8
+* UPDATED FOR LATEST VERSION - CDH 5.4.8
 
 
 * Under development. 
